@@ -13,9 +13,9 @@ module.exports = {
     'stage_2': {
       label: 'Final Round',
       voteUI: [
-        { label: 'meh', value: 1 },
-        { label: 'yay', value: 2 },
-        { label: 'MUST', value: 3 }
+        { label: 'nope', value: 1 },
+        { label: 'like', value: 2 },
+        { label: 'LOVE', value: 3 }
       ]
     }
   },
