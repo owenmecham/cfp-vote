@@ -4,7 +4,7 @@ const { getUserStagedVotesKey, getStagedTalksKey } = store.keys
 
 module.exports = async function (stage) {
   const users = (await getUsers()).map(user => user.login);
-  const talks = await store.lrange(getStagedTalksKey(stage), 0, -1)
+  const talks = await store.lrange(getStagedTalksKey(stage), 0, -1).sort(() => (0.5 - Math.random()))
 
   const voteData = await Promise.all(users.map(async (user) => {
     const key = getUserStagedVotesKey(user, stage)
